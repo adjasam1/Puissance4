@@ -73,7 +73,7 @@ public class Puissance4 {
     //   System.out.println(grille[i][2]);
     // }
     // System.out.println();
-    //
+  
     System.out.println("Grille du puissance 4 : ");
     for (int j = 0; j < hauteur; j++) {
       for (int i = 0; i < largeur; i++) {
