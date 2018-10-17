@@ -61,7 +61,7 @@ public class Puissance4 {
     grille[6][4]=0;
     grille[6][5]=0;
 
-    // // (équivaut à) int[][] = {{0,1,2,3,4},{0,1,2,3,4},{0,1,2,3,4}};
+    // int[][] = {{0,0,0,0,0,0},{0,0,0,0,0,0},{0,0,0,0,0,0},{0,0,0,0,0,0},{0,0,0,0,0,0},{0,0,0,0,0,0},{0,0,0,0,0,0}};
     //
     // System.out.print("Colonne n°2 : ");
     // for (int j = 0; j < hauteur; j++) {
@@ -73,7 +73,7 @@ public class Puissance4 {
     //   System.out.println(grille[i][2]);
     // }
     // System.out.println();
-  
+
     System.out.println("Grille du puissance 4 : ");
     for (int j = 0; j < hauteur; j++) {
       for (int i = 0; i < largeur; i++) {
