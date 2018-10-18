@@ -3,14 +3,15 @@ import java.util.Scanner;
 public class Puissance4 {
   static Scanner saisie;
   private static int[][] grille;
+  public static final int largeur = 7;
+  public static final int hauteur = 6;
+
 
   public static void main(String[] args) {
     Scanner saisie = new Scanner(System.in);
 
     init();
 
-    int largeur = 7; // largeur
-    int hauteur = 6; // hauteur
 
     System.out.println("Grille du puissance 4 : ");
     for (int j = 0; j < hauteur; j++) {
@@ -90,6 +91,8 @@ public class Puissance4 {
       //  methode validation partie gagné par J2 arret joueur
       tour++;
     } while (tour <= 21);
+
+    System.out.println("égalité");
   }
 
 
@@ -110,31 +113,30 @@ public class Puissance4 {
   }
 
   public static void init() {
-    int largeur = 7; // largeur
-    int hauteur = 6; // hauteur
+
 
     grille = new int[largeur][hauteur];
 
-    grille[0][0]=2;
-    grille[0][1]=1;
-    grille[0][2]=1;
-    grille[0][3]=2;
-    grille[0][4]=2;
-    grille[0][5]=1;
-
-    grille[1][0]=0;
-    grille[1][1]=2;
-    grille[1][2]=2;
-    grille[1][3]=2;
-    grille[1][4]=1;
-    grille[1][5]=2;
-
-    grille[2][0]=0;
-    grille[2][1]=0;
-    grille[2][2]=0;
-    grille[2][3]=2;
-    grille[2][4]=1;
-    grille[2][5]=2;
+    // grille[0][0]=2;
+    // grille[0][1]=1;
+    // grille[0][2]=1;
+    // grille[0][3]=2;
+    // grille[0][4]=2;
+    // grille[0][5]=1;
+    //
+    // grille[1][0]=0;
+    // grille[1][1]=2;
+    // grille[1][2]=2;
+    // grille[1][3]=2;
+    // grille[1][4]=1;
+    // grille[1][5]=2;
+    //
+    // grille[2][0]=0;
+    // grille[2][1]=0;
+    // grille[2][2]=0;
+    // grille[2][3]=2;
+    // grille[2][4]=1;
+    // grille[2][5]=2;
 
     grille[3][0]=0;
     grille[3][1]=0;
@@ -165,7 +167,32 @@ public class Puissance4 {
     grille[6][5]=0;
 
 
+    grille[0][0]=0;
+    grille[0][1]=0;
+    grille[0][2]=0;
+    grille[0][3]=0;
+    grille[0][4]=0;
+    grille[0][5]=0;
+
+    grille[1][0]=0;
+    grille[1][1]=0;
+    grille[1][2]=0;
+    grille[1][3]=0;
+    grille[1][4]=0;
+    grille[1][5]=0;
+
+    grille[2][0]=0;
+    grille[2][1]=0;
+    grille[2][2]=0;
+    grille[2][3]=0;
+    grille[2][4]=0;
+    grille[2][5]=0;
+
+
+
   }
+
+
 
 }
 
