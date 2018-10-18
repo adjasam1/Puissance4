@@ -5,9 +5,9 @@ public class Test {
   public static void main (String[] args) {
 
 
-    System.out.println(testChoix(1));
-    System.out.println(testChoix(2));
-    System.out.println(testChoix(3));
+    System.out.println(selectionHauteur(1));
+    System.out.println(selectionHauteur(2));
+    System.out.println(selectionHauteur(3));
 
 
 
@@ -72,7 +72,7 @@ public class Test {
 
   }
 
-  public static int testChoix(int choix) {
+  public static int selectionHauteur(int choix) {
     init();
     int i = 5;
 
@@ -83,7 +83,11 @@ public class Test {
       }
       i--;
     }
-    return 0;
+    return i;
 
   }
+  // public static int ModifGrille(int choix, int jeton){
+  // grille [choix-1][selectionHauteur(choix)] = jeton;
+  //
+  // }
 }
