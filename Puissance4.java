@@ -2,29 +2,15 @@ import java.util.Scanner;
 
 public class Puissance4 {
   static Scanner saisie;
-
+  private static int[][] grille;
 
   public static void main(String[] args) {
     Scanner saisie = new Scanner(System.in);
 
     init();
 
-
-    // int largeur = 7; // largeur
-    //int hauteur = 6; // hauteur
-
-    //int[][] grille = new int[largeur][hauteur];
-    //
-    // System.out.print("Colonne n°2 : ");
-    // for (int j = 0; j < hauteur; j++) {
-    //   System.out.println(grille[1][j]);
-    // }
-    //
-    // System.out.print("Ligne n°3 : ");
-    // for (int i = 0; i < largeur; i++) {
-    //   System.out.println(grille[i][2]);
-    // }
-    // System.out.println();
+    int largeur = 7; // largeur
+    int hauteur = 6; // hauteur
 
     System.out.println("Grille du puissance 4 : ");
     for (int j = 0; j < hauteur; j++) {
@@ -53,7 +39,8 @@ public class Puissance4 {
         //verifie si la colonne n'est pas pleine
 
         else if(grille[choix-1][0]==0){
-          selectionHauteur(choix, jeton);
+          //selectionHauteur(choix);
+          grille [choix-1][selectionHauteur(choix)] = jeton;
         }
         else {
           System.out.println("La colonne choisi est pleine, recommencez.");
@@ -81,7 +68,7 @@ public class Puissance4 {
         //verifie si la colonne n'est pas pleine
 
         else if(grille[choix-1][0]==0){
-          selectionHauteur(choix, jeton);
+          grille [choix-1][selectionHauteur(choix)] = jeton;
         }
         else {
           System.out.println("La colonne choisi est pleine, recommencez.");
@@ -102,13 +89,13 @@ public class Puissance4 {
 
 
 
-  public static int selectionHauteur(int choix, int jeton) {
-    init();
+  public static int selectionHauteur(int choix) {
+
     int i = 5;
 
     while (i>= 0) {
       if (grille[choix-1][i] == 0){
-        grille [choix-1][i] = jeton;
+
         return i;
       }
       i--;

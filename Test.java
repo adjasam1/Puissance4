@@ -4,9 +4,11 @@ public class Test {
 
   public static void main (String[] args) {
 
+
     System.out.println(testChoix(1));
     System.out.println(testChoix(2));
     System.out.println(testChoix(3));
+
 
 
 
@@ -18,8 +20,8 @@ public class Test {
 
     grille = new int[largeur][hauteur];
 
-    grille[0][0]=0;
-    grille[0][1]=0;
+    grille[0][0]=1;
+    grille[0][1]=1;
     grille[0][2]=1;
     grille[0][3]=2;
     grille[0][4]=2;
@@ -37,7 +39,7 @@ public class Test {
     grille[2][2]=0;
     grille[2][3]=0;
     grille[2][4]=0;
-    grille[2][5]=0;
+    grille[2][5]=3;
 
     grille[3][0]=0;
     grille[3][1]=0;
@@ -76,7 +78,7 @@ public class Test {
 
     while (i>= 0) {
       if (grille[choix-1][i] == 0){
-        grille [choix-1][i] = 1;
+        //grille [choix-1][i] = 1;
         return i;
       }
       i--;
