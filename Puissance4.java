@@ -109,6 +109,11 @@ public class Puissance4 {
       }
     } while (J1>7 || J1<1 || grille[J1-1][0]!=0);
 
+
+    //vérification si le joueur gagne
+        //vérification pour ligne
+
+
     System.out.println("Grille du puissance 4 : ");
     for (int j = 0; j < hauteur; j++) {
       for (int i = 0; i < largeur; i++) {
