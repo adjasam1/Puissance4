@@ -11,15 +11,9 @@ public class Puissance4 {
     Scanner saisie = new Scanner(System.in);
 
     init();
+    AffichageTab();
 
 
-    System.out.println("Grille du puissance 4 : ");
-    for (int j = 0; j < hauteur; j++) {
-      for (int i = 0; i < largeur; i++) {
-        System.out.print(" | " + grille[i][j] + " | ");
-      }
-      System.out.println();
-    }
 
 
     // tour de jeu
@@ -44,14 +38,7 @@ public class Puissance4 {
             {
               //nouvelle valeur dans la grille
               grille [choix-1][selectionHauteur(choix)] = jeton;
-              System.out.println("Grille du puissance 4 : ");
-              for (int j = 0; j < hauteur; j++)
-                {
-                for (int i = 0; i < largeur; i++) {
-                  System.out.print(" | " + grille[i][j] + " | ");
-                }
-                System.out.println();
-              }
+              AffichageTab();
 
             }
             else
@@ -75,13 +62,7 @@ public class Puissance4 {
 
             else if(grille[choix-1][0]==0){
               grille [choix-1][selectionHauteur(choix)] = jeton;
-              System.out.println("Grille du puissance 4 : ");
-              for (int j = 0; j < hauteur; j++) {
-                for (int i = 0; i < largeur; i++) {
-                  System.out.print(" | " + grille[i][j] + " | ");
-                }
-                System.out.println();
-              }
+              AffichageTab();
             }
             else {
               System.out.println("La colonne choisi est pleine, recommencez.");
@@ -192,60 +173,16 @@ public class Puissance4 {
 
   }
 
+  public static void AffichageTab (){
+
+    System.out.println("Grille du puissance 4 : ");
+    for (int j = 0; j < hauteur; j++) {
+      for (int i = 0; i < largeur; i++) {
+        System.out.print(" | " + grille[i][j] + " | ");
+      }
+      System.out.println();
+    }
+  }
 
 
 }
-
-
-
-
-// méthode choix Colonne
-//  public boolean choixColonne () {
-
-
-
-
-
-// //Choix joueur 1
-// int J1 =0;
-// do {
-//   System.out.println("Joueur 1, faites votre choix de colonne : ");
-//   J1 = saisie.nextInt();
-//   //largeur=J1-1;
-//   //colonne inexistante
-//
-//
-// //vérification si le joueur gagne
-//     //vérification pour ligne
-
-
-    //vérification si le joueur gagne
-        //vérification pour ligne
-
-    // int compteurA =0;
-    // int compteurB =0;
-    //
-    // for (int i = J1; i<J1+3 ; i++){
-    //   if (grille[i][hauteur]==grille[J1-1][hauteur]){
-    //     compteurA ++;
-    //   }
-    // }
-    // for (int i = J1; i>J1-3; i--){
-    //   if (grille[i][hauteur]==grille[J1-1][hauteur]){
-    //     compteurB ++;
-    //   }
-    // }
-    // if(compteurA+compteurB>=4){
-    //   System.out.println("Joueur1 a gagné");
-    // }
-  //  System.out.println("compteurA: "+compteurA + " compteurB "+compteurB);
-//     System.out.println("Grille du puissance 4 : ");
-//     for (int j = 0; j < hauteur; j++) {
-//       for (int i = 0; i < largeur; i++) {
-//         System.out.print(" | " + grille[i][j] + " | ");
-//       }
-//     System.out.println();
-//     }
-//
-//   }
-// }
